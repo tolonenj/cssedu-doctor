@@ -6,7 +6,7 @@ RUN apk add --update rclone \
     python3; \
     python3 -m venv $basedir; \
     cd $basedir; \
-    source .bin/activate; \
+    source ./bin/activate; \
     pip install --upgrade pip; \
     pip install mkdocs; \
     mkdocs new deployment; \
