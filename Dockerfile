@@ -1,6 +1,6 @@
 FROM libpod/alpine
 
-RUN apk add --update s3fs-fuse \
+RUN apk add s3fs-fuse \
     ca-certificates \
     bash \
     git \
