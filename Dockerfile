@@ -5,6 +5,7 @@ RUN apk add s3fs-fuse; \
     pip install mkdocs; \
     mkdocs new cssedu; \
     cd cssedu; \
+    echo "# Hello world" > ./docs/index.md; \
     mkdocs serve --dev-addr localhost:80
 
 CMD ["cat", "/dev/null"]
