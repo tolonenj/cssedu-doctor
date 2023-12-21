@@ -6,6 +6,8 @@ RUN apk add s3fs-fuse; \
     mkdocs new cssedu; \
     cd cssedu; \
     echo "# Hello world" > ./docs/index.md; \
+    pwd; \
+    whoami; \
     mkdocs serve --dev-addr localhost:80
 
 CMD ["cat", "/dev/null"]
