@@ -1,4 +1,5 @@
 site_name: CSS Edu
+site_url: https://cssedu.rahtiapp.fi
 theme:
   name: readthedocs
   highlightjs: true
