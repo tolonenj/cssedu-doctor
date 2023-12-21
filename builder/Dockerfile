@@ -1,6 +1,6 @@
-FROM libpod/alpine
+FROM alpine:3.19
 
-RUN apk add s3fs-fuse \
+RUN apk add --update s3fs-fuse \
     ca-certificates \
     bash \
     git \
@@ -10,12 +10,4 @@ RUN apk add s3fs-fuse \
     py3-pip \
     build-base && \
     pip install --upgrade pip; \
-    pip install mkdocs; \
-    mkdocs new cssedu; \
-    cd cssedu; \
-    echo "# Hello world" > ./docs/index.md; \
-    pwd; \
-    whoami; \
-    mkdocs serve --dev-addr localhost:80
-
-CMD ["cat", "/dev/null"]
+    pip install mkdocs
