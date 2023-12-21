@@ -5,6 +5,8 @@ RUN python3 -m venv cssedu-docs; \
     source ./bin/activate; \
     pip install --upgrade pip; \
     pip install mkdocs; \
+    mkdocs new cssdocs-edu; \
+    cd cssdocs-edu; \
     mkdocs build; \
     pwd
 
