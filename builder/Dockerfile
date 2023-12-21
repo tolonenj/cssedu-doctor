@@ -8,6 +8,4 @@ RUN apk add --update s3fs-fuse \
     python3 \
     python3-dev \
     py3-pip \
-    build-base && \
-    pip install --upgrade pip; \
-    pip install mkdocs
+    build-base
