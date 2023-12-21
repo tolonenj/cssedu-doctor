@@ -1,6 +1,14 @@
-FROM python:3.13.0a2-alpine3.19
+FROM libpod/alpine
 
-RUN apk add s3fs-fuse; \
+RUN apk add --update s3fs-fuse \
+    ca-certificates \
+    bash \
+    git \
+    openssh \
+    python3 \
+    python3-dev \
+    py3-pip \
+    build-base && \
     pip install --upgrade pip; \
     pip install mkdocs; \
     mkdocs new cssedu; \
