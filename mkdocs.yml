@@ -1,0 +1,6 @@
+site_name: CSS Edu
+theme:
+  name: readthedocs
+  highlightjs: true
+plugins:
+  - search
