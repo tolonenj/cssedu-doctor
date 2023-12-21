@@ -1,6 +1,6 @@
 FROM alpine:3.19 as builder
 
-basedir=edudocs
+ENV basedir=edudocs
 
 RUN apk add --update rclone \
     python3; \
