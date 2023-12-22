@@ -13,8 +13,8 @@ RUN apk add --update rclone \
     cd deployment; \
     rm ./docs/*
 
-COPY ../mkdocs.yml /edudocs/deployment
-COPY ../rclone.conf ~/.rclone.conf
+COPY mkdocs.yml /edudocs/deployment
+COPY rclone.conf ~/.rclone.conf
 
 RUN rclone sync ./docs/ allas:cssedu; \
     mkdocs build
