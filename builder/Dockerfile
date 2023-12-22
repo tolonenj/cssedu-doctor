@@ -1,11 +1,11 @@
 FROM alpine:3.19 as builder
 
-ENV basedir=edudocs
+
 
 RUN apk add --update rclone \
     python3; \
-    python3 -m venv $basedir; \
-    cd $basedir; \
+    python3 -m venv edudocs; \
+    cd edudocs; \
     source ./bin/activate; \
     pip install --upgrade pip; \
     pip install mkdocs; \
@@ -13,11 +13,11 @@ RUN apk add --update rclone \
     cd deployment; \
     rm ./docs/*
 
-COPY mkdocs.yml /$basedir/deployment
+COPY mkdocs.yml /edudocs/deployment
 
 RUN rclone sync ./docs/ allas:cssedu; \
     mkdocs build
 
 FROM nginx
-COPY --from=builder /$basedir/deployment/site /usr/share/nginx/html
+COPY --from=builder /edudocs/deployment/site /usr/share/nginx/html
 EXPOSE 80
