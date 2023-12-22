@@ -16,10 +16,12 @@ RUN apk add --update rclone \
 COPY mkdocs.yml /edudocs/deployment
 COPY rclone.conf /root/.config/rclone/rclone.conf
 
+RUN env; \
+    cat /root/.config/rclone/rclone.conf
+
 RUN rclone sync ./docs/ allas:cssedu; \
     mkdocs build
 
-RUN env
 
 FROM nginx
 COPY --from=builder /edudocs/deployment/site /usr/share/nginx/html
