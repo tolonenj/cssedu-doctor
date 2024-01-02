@@ -14,7 +14,7 @@ RUN apk add --update rclone \
     rm ./docs/*; \
     mkdir -p ~/.config/rclone; \
     cat > ~/.config/rclone/rclone.conf << "EOF"
-    [allas]
+    \[allas\]
     type = swift
     env_auth = true
     EOF
