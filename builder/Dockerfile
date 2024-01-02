@@ -1,6 +1,7 @@
 FROM alpine:3.19 as builder
 
 
+WORKDIR /edudocs/deployment
 
 RUN apk add --update rclone \
     python3; \
@@ -13,14 +14,14 @@ RUN apk add --update rclone \
     cd deployment; \
     rm ./docs/*; \
     mkdir -p ~/.config/rclone; \
-    echo -e "[allas]\ntype = swift\nenv_auth = true" > ~/.config/rclone/rclone.conf
+    echo -e "[allas]\ntype = swift\nenv_auth = true" > ~/.config/rclone/rclone.conf; \
+    rclone sync /edudocs/deployment/docs/ allas:cssedu; \
+    mkdocs build
     
 
-COPY mkdocs.yml /edudocs/deployment
+#COPY mkdocs.yml /edudocs/deployment
 #COPY rclone.conf /root/.config/rclone/rclone.conf
 
-RUN rclone sync /edudocs/deployment/docs/ allas:cssedu; \
-    mkdocs build
 
 
 FROM nginx
