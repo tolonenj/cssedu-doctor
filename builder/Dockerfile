@@ -13,7 +13,7 @@ RUN mkdir -p ~/.config/rclone; \
     mkdocs new deployment; \
     cd /edudocs/deployment; \
     rm /edudocs/deployment/docs/*; \
-    rclone sync /edudocs/deployment/docs/ allas:cssedu; \
+    rclone sync allas:cssedu /edudocs/deployment/docs; \
     mv -f /edudocs/deployment/docs/mkdocs.yml /edudocs/deployment/; \
     mkdocs build
 
