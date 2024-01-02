@@ -13,11 +13,8 @@ RUN apk add --update rclone \
     cd deployment; \
     rm ./docs/*; \
     mkdir -p ~/.config/rclone; \
-    cat > ~/.config/rclone/rclone.conf << "EOF"
-    \[allas\]
-    type = swift
-    env_auth = true
-    EOF
+    echo -e "[allas]\ntype = swift\nenv_auth = true" > ~/.config/rclone/rclone.conf
+    
 
 COPY mkdocs.yml /edudocs/deployment
 #COPY rclone.conf /root/.config/rclone/rclone.conf
