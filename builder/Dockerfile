@@ -19,5 +19,6 @@ RUN mkdir -p ~/.config/rclone; \
 
 
 FROM nginx
+RUN sed -i s/80\;/8080\;/g /etc/nginx/conf.d/default.conf
 COPY --from=builder /edudocs/deployment/site /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 8080
