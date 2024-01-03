@@ -15,7 +15,7 @@ RUN mkdir -p ~/.config/rclone; \
     rm /edudocs/deployment/docs/*; \
     rclone sync allas:cssedu /edudocs/deployment/docs; \
     mv -f /edudocs/deployment/docs/mkdocs.yml /edudocs/deployment/; \
-    find /edudocs/deployment/docs -name "*.md" -exec sed -i 's/\..*kuvat\//https:\/\/a3s.fi\/cssedu-images\//g' {} \; \
+    find /edudocs/deployment/docs -name "*.md" -exec sed -i 's/\..*kuvat\//https:\/\/a3s.fi\/cssedu-images\//g' {} \;; \
     mkdocs build
 
 FROM nginx
