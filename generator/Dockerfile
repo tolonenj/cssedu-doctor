@@ -1,13 +1,15 @@
-FROM image-registry.apps.2.rahti.csc.fi/cssedu/cssedu@sha256:1f90c1f75a4092868957c0f4cf491ef441344bdc8e372d0bec9c6203fb7c2217 AS builder
+FROM alpine:3.19
 
-RUN python3 -m venv cssedu-docs; \
-    cd cssedu-docs; \
-    source ./bin/activate; \
+WORKDIR /edudocs
+
+RUN mkdir -p ~/.config/rclone; \
+    echo -e "[allas]\ntype = swift\nenv_auth = true" > ~/.config/rclone/rclone.conf; \
+    apk add --update rclone \
+    python3; \
+    python3 -m venv /edudocs; \
+    source /edudocs/bin/activate; \
     pip install --upgrade pip; \
     pip install mkdocs; \
-    mkdocs new cssdocs-edu; \
-    cd cssdocs-edu; \
-    mkdocs build; \
-    pwd
-
-CMD ["cat", "/dev/null"]
+    mkdocs new deployment; \
+    cd /edudocs/deployment; \
+    rm /edudocs/deployment/docs/*
