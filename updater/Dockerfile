@@ -1,18 +1,9 @@
-FROM alpine:3.19 as builder
+FROM cssedu-generator:latest as builder
 
 WORKDIR /edudocs
 
-RUN mkdir -p ~/.config/rclone; \
-    echo -e "[allas]\ntype = swift\nenv_auth = true" > ~/.config/rclone/rclone.conf; \
-    apk add --update rclone \
-    python3; \
-    python3 -m venv /edudocs; \
-    source /edudocs/bin/activate; \
-    pip install --upgrade pip; \
-    pip install mkdocs; \
-    mkdocs new deployment; \
+RUN source /edudocs/bin/activate; \
     cd /edudocs/deployment; \
-    rm /edudocs/deployment/docs/*; \
     rclone sync allas:cssedu /edudocs/deployment/docs; \
     mv -f /edudocs/deployment/docs/mkdocs.yml /edudocs/deployment/; \
     mkdocs build
