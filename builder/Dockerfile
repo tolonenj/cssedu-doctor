@@ -17,8 +17,6 @@ RUN mkdir -p ~/.config/rclone; \
     mv -f /edudocs/deployment/docs/mkdocs.yml /edudocs/deployment/; \
     mkdocs build
 
-
-
 FROM nginx
 RUN chmod g+rwx /var/cache/nginx /var/run /var/log/nginx && \
     chown nginx.root /var/cache/nginx /var/run /var/log/nginx && \
@@ -30,4 +28,4 @@ RUN chmod g+rwx /var/cache/nginx /var/run /var/log/nginx && \
     sed -i.bak 's/^user/#user/' /etc/nginx/nginx.conf
 
 COPY --from=builder /edudocs/deployment/site /usr/share/nginx/html
-EXPOSE 8080
+EXPOSE 8081
