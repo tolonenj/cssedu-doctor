@@ -1,13 +1,20 @@
-site_name: CSC Cloud Solutions Support team's info for Education
+site_name: Docs CSS
 site_url: https://cssedu.2.rahtiapp.fi
 theme:
   name: material
-  highlightjs: true
+  custom_dir: extras
+  palette:
+    primary: custom
+  font: false
+  logo: csc_logo.svg
+  favicon: csc_logo.svg
+extra_css:
+  - extra.css
 plugins:
   - tags
   - search
 nav:
-  - Home: 'index.md'
+  - 'Start': 'index.md'
   - 'Authentication and authorization infrastucture':
     - Haka: 'haka/index.md'
     - MyCSC: 'mycsc/index.md'
