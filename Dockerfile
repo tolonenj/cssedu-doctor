@@ -11,7 +11,7 @@ RUN mkdir -p ~/.config/rclone /edudocs/deployment/docs; \
     python3 -m venv /edudocs; \
     source /edudocs/bin/activate; \
     pip install --upgrade pip; \
-    pip install mkdocs; \
+    pip install mkdocs mkdocs-material; \
     rclone sync allas:cssedu /edudocs/deployment/docs; \
     find /edudocs/deployment/docs -name "*.md" -exec sed -i 's/\..*kuvat\//https:\/\/a3s.fi\/cssedu-images\//g' {} \;; \
     mkdocs build -f /edudocs/deployment/mkdocs.yml
