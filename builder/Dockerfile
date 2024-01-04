@@ -1,8 +1,10 @@
 FROM alpine:3.19 as builder
 
-WORKDIR /edudocs
+WORKDIR /edudocs/deployment
 
-RUN mkdir -p ~/.config/rclone; \
+COPY /mkdocs /edudocs/deployment
+
+RUN mkdir -p ~/.config/rclone /edudocs/deployment/docs; \
     echo -e "[allas]\ntype = swift\nenv_auth = true" > ~/.config/rclone/rclone.conf; \
     apk add --update rclone \
     python3; \
@@ -10,13 +12,9 @@ RUN mkdir -p ~/.config/rclone; \
     source /edudocs/bin/activate; \
     pip install --upgrade pip; \
     pip install mkdocs; \
-    mkdocs new deployment; \
-    cd /edudocs/deployment; \
-    rm /edudocs/deployment/docs/*; \
     rclone sync allas:cssedu /edudocs/deployment/docs; \
-    mv -f /edudocs/deployment/docs/mkdocs.yml /edudocs/deployment/; \
     find /edudocs/deployment/docs -name "*.md" -exec sed -i 's/\..*kuvat\//https:\/\/a3s.fi\/cssedu-images\//g' {} \;; \
-    mkdocs build
+    mkdocs build -f /edudocs/deployment/mkdocs.yml
 
 FROM nginx
 RUN chmod g+rwx /var/cache/nginx /var/run /var/log/nginx && \
