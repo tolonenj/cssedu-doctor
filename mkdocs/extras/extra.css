@@ -1,6 +1,11 @@
 :root {
   --md-primary-fg-color:        #424C72;
-  --md-accent-fg-color:         #676A8A;
   --md-primary-fg-color--light: #BEBDCC;
   --md-primary-fg-color--dark:  #8F8FA8;
+}
+[data-md-color-accent="csc-orange"] {
+  --md-accent-fg-color:              #FF5800;
+  --md-accent-fg-color--transparent: #ff6e421a;
+  --md-accent-bg-color:              #fff;
+  --md-accent-bg-color--light:       #ffffffb3;
 }

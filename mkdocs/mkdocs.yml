@@ -3,8 +3,21 @@ site_url: https://cssedu.2.rahtiapp.fi
 theme:
   name: material
   custom_dir: extras
+  features:
+    - navigation.expand
   palette:
-    primary: custom
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+      accent: csc-orange
+      primary: custom
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+      accent: csc-orange
+      primary: custom
   font: false
   logo: csc_logo.svg
   favicon: csc_logo.svg
