@@ -1,0 +1,31 @@
+site_name: CSC Cloud Solutions Support team's info for Education
+site_url: https://cssedu.2.rahtiapp.fi
+theme:
+  name: material
+  highlightjs: true
+plugins:
+  - tags
+  - search
+nav:
+  - Home: 'index.md'
+  - 'Authentication and authorization infrastucture':
+    - Haka: 'haka/index.md'
+    - MyCSC: 'mycsc/index.md'
+  - 'Remote desktop and environment for sensitive data':
+    - 'SD Desktop': 'sd-desktop/index.md'
+  - 'National HPC/HPA/AI':
+    - 'Docs CSC': 'docs-csc.md'
+  - 'Community cloud':
+    - cPouta: 'cpouta/index.md'
+  - 'Virtual private cloud':
+    - ePouta: 'epouta.md'
+  - 'Database as a service':
+    - Pukki: 'pukki/index.md'
+  - 'Container cloud':
+    - Rahti: 'rahti/index.md'
+  - 'Easy data analytics':
+    - 'CSC Noppe': 'noppe/index.md'
+  - 'High-capacity storage':
+    - Allas: 'allas/index.md'
+  - 'Sensitive data storage':
+    - 'SD Connect': 'sd-connect/index.md'
