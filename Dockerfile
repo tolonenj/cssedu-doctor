@@ -2,7 +2,7 @@ FROM alpine:3.19 as builder
 
 WORKDIR /edudocs/deployment
 
-COPY /mkdocs /edudocs/deployment
+COPY mkdocs /edudocs/deployment
 
 RUN mkdir -p ~/.config/rclone /edudocs/deployment/docs; \
     echo -e "[allas]\ntype = swift\nenv_auth = true" > ~/.config/rclone/rclone.conf; \
