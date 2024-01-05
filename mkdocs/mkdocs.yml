@@ -3,8 +3,6 @@ site_url: https://cssedu.2.rahtiapp.fi
 theme:
   name: material
   custom_dir: extras
-  features:
-    - navigation.expand
   palette:
     - scheme: default
       toggle:
@@ -26,6 +24,14 @@ extra_css:
 plugins:
   - tags
   - search
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 nav:
   - 'Start': 'index.md'
   - 'Authentication and authorization infrastucture':
