@@ -4,16 +4,27 @@ theme:
   name: material
   custom_dir: extras
   palette:
-    - scheme: default
+
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/brightness-7
-        name: Dark mode
+        icon: material/lightbulb-variant
+        name: Switch to Light mode
       accent: csc-orange
       primary: custom
-    - scheme: slate
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       toggle:
-        icon: material/brightness-4
-        name: Light mode
+        icon: material/lightbulb
+        name: Switch to Dark mode
+      accent: csc-orange
+      primary: custom
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to System default mode
       accent: csc-orange
       primary: custom
   font: false
@@ -37,11 +48,12 @@ nav:
   - 'Start': 'index.md'
   - 'Authentication and authorization infrastucture':
     - Haka: 'haka/index.md'
-    - MyCSC: 'mycsc/index.md'
+    - 'My CSC': 'mycsc/index.md'
   - 'Remote desktop and environment for sensitive data':
     - 'SD Desktop': 'sd-desktop/index.md'
   - 'National HPC/HPA/AI':
     - 'Docs CSC': 'docs-csc.md'
+    - 'Puhti': 'puhti/index.md'
   - 'Community cloud':
     - cPouta: 'cpouta/index.md'
   - 'Virtual private cloud':
