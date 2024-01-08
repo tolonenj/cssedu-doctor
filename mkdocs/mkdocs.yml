@@ -1,4 +1,4 @@
-site_name: Docs CSS
+site_name: "CSS Tutorials"
 site_url: https://cssedu.2.rahtiapp.fi
 theme:
   name: material
@@ -22,7 +22,8 @@ theme:
 extra_css:
   - extra.css
 plugins:
-  - tags
+  - tags:
+      tags_file: tags.md
   - search
 markdown_extensions:
   - admonition
@@ -55,3 +56,4 @@ nav:
     - Allas: 'allas/index.md'
   - 'Sensitive data storage':
     - 'SD Connect': 'sd-connect/index.md'
+  - 'Articles sorted by tags': 'tags.md'
