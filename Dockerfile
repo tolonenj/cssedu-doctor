@@ -12,8 +12,8 @@ RUN mkdir -p ~/.config/rclone /edudocs/deployment/docs; \
     source /edudocs/bin/activate; \
     pip install --upgrade pip; \
     pip install mkdocs mkdocs-material; \
-    rclone sync allas:cssedu /edudocs/deployment/docs; \
-    find /edudocs/deployment/docs -name "*.md" -exec sed -i 's/\..*kuvat\//https:\/\/a3s.fi\/cssedu-images\//g' {} \;; \
+    rclone sync allas:css-edu-tutorials /edudocs/deployment/docs; \
+    find /edudocs/deployment/docs -name "*.md" -exec sed -i 's/\..*kuvat\//https:\/\/a3s.fi\/imgs\//g' {} \;; \
     mkdocs build -f /edudocs/deployment/mkdocs.yml
 
 FROM nginx
