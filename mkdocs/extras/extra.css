@@ -9,3 +9,53 @@
   --md-accent-bg-color:              #fff;
   --md-accent-bg-color--light:       #ffffffb3;
 }
+.md-typeset .admonition.css-tutorial,
+.md-typeset details.css-tutorial {
+  border-color: rgb(125, 194, 66);
+}
+.md-typeset .css-tutorial > .admonition-title,
+.md-typeset .css-tutorial > summary {
+  background-color: rgba(125, 194, 66, 0.1);
+}
+.md-typeset .css-tutorial > .admonition-title::before,
+.md-typeset .css-tutorial > summary::before {
+  background-color: rgb(125, 194, 66);
+  -webkit-mask-image: var(--md-admonition-icon--css-tutorial);
+          mask-image: var(--md-admonition-icon--css-tutorial);
+}
+.md-typeset .admonition.info,
+.md-typeset details.info {
+  border-color: rgb(0, 130, 187);
+}
+.md-typeset .info > .admonition-title,
+.md-typeset .info > summary {
+  background-color: rgba(0, 130, 187, 0.1);
+}
+.md-typeset .info > .admonition-title::before,
+.md-typeset .info > summary::before {
+  background-color: rgb(0, 130, 187);
+}
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: rgb(0, 199, 178);
+}
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary {
+  background-color: rgba(0, 199, 178, 0.1);
+}
+.md-typeset .tip > .admonition-title::before,
+.md-typeset .tip > summary::before {
+  background-color: rgb(0, 199, 178);
+}
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-color: rgb(255, 88, 0);
+}
+.md-typeset .warning > .admonition-title,
+.md-typeset .warning > summary {
+  background-color: rgba(255, 88, 0, 0.1);
+}
+.md-typeset .warning > .admonition-title::before,
+.md-typeset .warning > summary::before {
+  background-color: rgb(255, 88, 0);
+}
