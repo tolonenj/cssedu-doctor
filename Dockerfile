@@ -15,7 +15,7 @@ RUN mkdir -p ~/.config/rclone /edudocs/deployment/docs; \
     pip install mkdocs mkdocs-material; \
     rclone sync allas:css-edu-tutorials /edudocs/deployment/docs; \
     find /edudocs/deployment/docs -name "*.md" -exec sed -i 's/\..*kuvat\//https:\/\/a3s.fi\/imgs\//g' {} \;; \
-    mkdocs build -f /edudocs/deployment/mkdocs.yml \
+    mkdocs build -f /edudocs/deployment/mkdocs.yml; \
     wget -P /edudocs/deployment/site https://a3s.fi/css-tutorials-tools/nanumpenscript-regular-webfont.woff
 
 FROM nginx
