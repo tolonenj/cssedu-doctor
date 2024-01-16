@@ -24,7 +24,7 @@ RUN chmod g+rwx /var/cache/nginx /var/run /var/log/nginx && \
     # add a rule to accept fonts from a different domain.
     echo "\
 server {\
-    listen 80;\
+    listen 8081;\
     location ~* \.(?:woff|woff2|ttf)$ {\
         add_header Access-Control-Allow-Origin *;\
     }\
