@@ -59,3 +59,7 @@
 .md-typeset .warning > summary::before {
   background-color: rgb(255, 88, 0);
 }
+@font-face {
+  font-family: 'NanumPen';
+  src: url('https://a3s.fi/css-tutorials-tools/NanumPenScript-Regular.ttf') format('ttf');
+}
