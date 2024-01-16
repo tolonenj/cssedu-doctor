@@ -61,8 +61,7 @@
 }
 @font-face {
   font-family: 'nanumpen';
-  src: url('https://a3s.fi/css-tutorials-tools/nanumpenscript-regular-webfont.woff2') format('woff2'),
-     url('https://a3s.fi/css-tutorials-tools/nanumpenscript-regular-webfont.woff') format('woff');
+  src: url('nanumpenscript-regular-webfont.woff') format('woff'),
   font-weight: normal;
   font-style: normal;
 }
