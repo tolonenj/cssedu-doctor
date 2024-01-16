@@ -60,6 +60,9 @@
   background-color: rgb(255, 88, 0);
 }
 @font-face {
-  font-family: 'NanumPen';
-  src: url('https://a3s.fi/css-tutorials-tools/NanumPenScript-Regular.ttf') format('ttf');
+  font-family: 'nanumpen';
+  src: url('https://a3s.fi/css-tutorials-tools/nanumpenscript-regular-webfont.woff2') format('woff2'),
+     url('https://a3s.fi/css-tutorials-tools/nanumpenscript-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
