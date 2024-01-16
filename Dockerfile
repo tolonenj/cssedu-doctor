@@ -21,14 +21,15 @@ RUN chmod g+rwx /var/cache/nginx /var/run /var/log/nginx && \
     chown nginx.root /var/cache/nginx /var/run /var/log/nginx && \
     # users are not allowed to listen on privileged ports
     sed -i.bak 's/listen\(.*\)80;/listen 8081;/' /etc/nginx/conf.d/default.conf && \
+    sed -i.bak 's/server_name\(.*\)localhost;/add_header Access-Control-Allow-Origin \"https:\/\/a3s.fi\";\;/' /etc/nginx/conf.d/default.conf && \
     # add a rule to accept fonts from a different domain.
-    echo "\
-server {\
-    listen 8081;\
-    location ~* \.(?:woff|woff2|ttf)$ {\
-        add_header Access-Control-Allow-Origin *;\
-    }\
-}" > /etc/nginx/conf.d/font_rule.conf && \
+#    echo "\
+#server {\
+#    listen 8081;\
+#    location ~* \.(?:woff|woff2|ttf)$ {\
+#        add_header Access-Control-Allow-Origin "https://a3s.fi";\
+#    }\
+#}" > /etc/nginx/conf.d/font_rule.conf && \
 
     # Make /etc/nginx/html/ available to use
     mkdir -p /etc/nginx/html/ && chmod 777 /etc/nginx/html/ && \
