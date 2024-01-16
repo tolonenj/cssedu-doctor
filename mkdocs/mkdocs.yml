@@ -27,7 +27,6 @@ theme:
         name: Switch to System default mode
       accent: csc-orange
       primary: custom
-  font: false
   logo: csc_logo.svg
   icon:
     admonition:
@@ -36,6 +35,7 @@ theme:
 extra_css:
   - extra.css
 plugins:
+  - privacy
   - tags:
       tags_file: tags.md
   - search
