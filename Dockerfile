@@ -20,7 +20,21 @@ FROM nginx
 RUN chmod g+rwx /var/cache/nginx /var/run /var/log/nginx && \
     chown nginx.root /var/cache/nginx /var/run /var/log/nginx && \
     # users are not allowed to listen on privileged ports
-    sed -i.bak 's/listen\(.*\)80;/listen 8081;/' /etc/nginx/conf.d/default.conf && \
+    # sed -i.bak 's/listen\(.*\)80;/listen 8081;/' /etc/nginx/conf.d/default.conf && \
+    echo "\
+server {\
+    listen 8081;\
+    server_name  localhost;\
+
+    location / {\
+        root   /usr/share/nginx/html;\
+        index  index.html index.htm;\
+        if ($filename ~* ^.*?\.(eot)|(ttf)|(woff)$){\
+            add_header Access-Control-Allow-Origin *;\
+        }\
+    }\
+}" > /etc/nginx/conf.d/default.conf && \
+
     # Make /etc/nginx/html/ available to use
     mkdir -p /etc/nginx/html/ && chmod 777 /etc/nginx/html/ && \
     # comment user directive as master process is run as user in OpenShift anyhow
