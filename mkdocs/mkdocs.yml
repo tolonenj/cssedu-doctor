@@ -48,10 +48,17 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
 nav:
   - 'Start': 'index.md'
   - 'Authentication and authorization infrastucture':
-    - Haka: 'haka/index.md'
+    - Haka: 'haka.md'
     - 'My CSC': 'mycsc/index.md'
   - 'Remote desktop and environment for sensitive data':
     - 'SD Desktop': 'sd-desktop/index.md'
@@ -67,7 +74,7 @@ nav:
   - 'Container cloud':
     - Rahti: 'rahti/index.md'
   - 'Easy data analytics':
-    - 'CSC Noppe': 'noppe/index.md'
+    - 'Noppe': 'noppe/index.md'
   - 'High-capacity storage':
     - Allas: 'allas/index.md'
   - 'Sensitive data storage':
