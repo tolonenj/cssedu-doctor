@@ -3,8 +3,9 @@ site_url: https://cssedu.2.rahtiapp.fi
 theme:
   name: material
   custom_dir: extras
+  features:
+    - navigation.expand
   palette:
-
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/lightbulb-variant
@@ -57,6 +58,7 @@ markdown_extensions:
 
 nav:
   - 'Start': 'index.md'
+  - 'All articles sorted by tags': 'tags.md'
   - 'Authentication and authorization infrastucture':
     - Haka: 'haka.md'
     - 'My CSC': 'mycsc/index.md'
@@ -79,4 +81,3 @@ nav:
     - Allas: 'allas/index.md'
   - 'Sensitive data storage':
     - 'SD Connect': 'sd-connect/index.md'
-  - 'Articles sorted by tags': 'tags.md'
