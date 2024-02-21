@@ -12,6 +12,37 @@
   max-width: none;
 }
 
+.md-typeset h1 {
+  font-size: 42px;
+  font-weight: 500;
+  color: #424c72;
+}
+
+.md-typeset h2 {
+  font-size: 32px;
+}
+
+.md-typeset h3 {
+  font-size: 26px;
+}
+
+.md-typeset h4 {
+  font-size: 22px;
+}
+
+.md-typeset h5 {
+  font-size: 18px;
+}
+
+.md-typeset h6 {
+  font-size: 16px;
+}
+
+.md-typeset :is(h2, h3, h4, h5, h6) {
+  font-weight: 700;
+  color: #595959;
+}
+
 [data-md-color-accent="csc-orange"] {
   --md-accent-fg-color: #ff5800;
   --md-accent-fg-color--transparent: #ff6e421a;
