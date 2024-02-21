@@ -33,6 +33,8 @@ theme:
     admonition:
       css-tutorial: material/lightning-bolt
   favicon: csc_logo.svg
+  font:
+    text: museo-sans
 extra_css:
   - extra.css
 plugins:

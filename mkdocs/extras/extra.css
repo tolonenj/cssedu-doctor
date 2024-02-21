@@ -1,14 +1,25 @@
+/* Museo Sans font */
+@import url("https://use.typekit.net/csv4mjm.css");
+
+/* Site settings */
 :root {
-  --md-primary-fg-color:        #424C72;
-  --md-primary-fg-color--light: #BEBDCC;
-  --md-primary-fg-color--dark:  #8F8FA8;
+  --md-primary-fg-color: #424c72;
+  --md-primary-fg-color--light: #bebdcc;
+  --md-primary-fg-color--dark: #8f8fa8;
 }
+
+.md-grid {
+  max-width: none;
+}
+
 [data-md-color-accent="csc-orange"] {
-  --md-accent-fg-color:              #FF5800;
+  --md-accent-fg-color: #ff5800;
   --md-accent-fg-color--transparent: #ff6e421a;
-  --md-accent-bg-color:              #fff;
-  --md-accent-bg-color--light:       #ffffffb3;
+  --md-accent-bg-color: #fff;
+  --md-accent-bg-color--light: #ffffffb3;
 }
+
+/* Custom Tutorial admonition */
 .md-typeset .admonition.css-tutorial,
 .md-typeset details.css-tutorial {
   border-color: rgb(125, 194, 66);
@@ -23,6 +34,8 @@
   -webkit-mask-image: var(--md-admonition-icon--css-tutorial);
           mask-image: var(--md-admonition-icon--css-tutorial);
 }
+
+/* Info admonition */
 .md-typeset .admonition.info,
 .md-typeset details.info {
   border-color: rgb(0, 130, 187);
@@ -35,6 +48,8 @@
 .md-typeset .info > summary::before {
   background-color: rgb(0, 130, 187);
 }
+
+/* Tip admonition */
 .md-typeset .admonition.tip,
 .md-typeset details.tip {
   border-color: rgb(0, 199, 178);
@@ -47,6 +62,8 @@
 .md-typeset .tip > summary::before {
   background-color: rgb(0, 199, 178);
 }
+
+/* Warning admonition */
 .md-typeset .admonition.warning,
 .md-typeset details.warning {
   border-color: rgb(255, 88, 0);
@@ -58,4 +75,18 @@
 .md-typeset .warning > .admonition-title::before,
 .md-typeset .warning > summary::before {
   background-color: rgb(255, 88, 0);
+}
+
+/* Header modifications */
+.md-header__inner {
+  margin-right: 12rem;
+  height: 71px;
+}
+.md-header__button.md-logo :is(img, svg) {
+  height: 3.5em;
+}
+
+/* Sidebar modifications */
+.md-sidebar__scrollwrap {
+  margin-left: 30px;
 }
