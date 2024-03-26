@@ -66,9 +66,12 @@ nav:
     - 'My CSC': 'mycsc/index.md'
   - 'Remote desktop and environment for sensitive data':
     - 'SD Desktop': 'sd-desktop/index.md'
+  - 'EuroHPC HPC/HPA/AI':
+    - 'LUMI': 'hpc.md'
   - 'National HPC/HPA/AI':
     - 'Docs CSC': 'docs-csc.md'
-    - 'Puhti': 'puhti/index.md'
+    - 'Mahti': 'hpc.md'
+    - 'Puhti': 'hpc.md'
   - 'Community cloud':
     - cPouta: 'cpouta/index.md'
   - 'Virtual private cloud':
