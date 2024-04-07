@@ -12,6 +12,16 @@
   max-width: none;
 }
 
+.md-content {
+  max-width: 48rem;
+}
+
+.md-main__inner {
+  margin: unset;
+  max-width: unset;
+  justify-content: space-between;
+}
+
 .md-typeset h1 {
   font-size: 42px;
   font-weight: 500;
@@ -120,4 +130,51 @@
 /* Sidebar modifications */
 .md-sidebar__scrollwrap {
   margin-left: 30px;
+}
+
+/* Screencapture highlighting colours  */
+.cscMainPurple {
+  --mainColour:rgb(131,0,81);
+  --subColour1:rgb(169,109,132);
+  --subColour2:rgb(191,148,164);
+}
+.cscMainTeal {
+  --mainColour:rgb(0,103,120);
+  --subColour1:rgb(114,147,161);
+  --subColour2:rgb(134,160,173);
+}
+.cscMainGrey {
+  --mainColour:rgb(94,106,113);
+  --subColour1:rgb(147,151,157);
+  --subColour2:rgb(177,179,183);
+}
+.cscMainBlue {
+  --mainColour:rgb(0,47,95);
+  --subColour1:rgb(103,106,138);
+  --subColour2:rgb(143,143,168);
+}
+.cscComplBlue {
+  --mainColour:rgb(0,130,187);
+  --subColour1:rgb(126,169,209);
+  --subColour2:rgb(166,192,222);
+}
+.cscComplGreen {
+  --mainColour:rgb(125,194,66);
+  --subColour1:rgb(176,214,138);
+  --subColour2:rgb(201,226,174);
+}
+.cscComplOrange {
+  --mainColour:rgb(255,88,0);
+  --subColour1:rgb(247,153,108);
+  --subColour2:rgb(251,185,149);
+}
+.cscComplPink {
+  --mainColour:rgb(234,29,119);
+  --subColour1:rgb(240,136,164);
+  --subColour2:rgb(245,174,190);
+}
+.cscComplOcean {
+  --mainColour:rgb(0,199,178);
+  --subColour1:rgb(146,211,202);
+  --subColour2:rgb(182,224,218);
 }
