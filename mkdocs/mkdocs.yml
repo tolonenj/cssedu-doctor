@@ -1,5 +1,5 @@
-site_name: "CSS Tutorials"
-site_url: https://cssedu.2.rahtiapp.fi
+site_name: "CSC Cloud Solution Support Team's Tutorials"
+site_url: https://cssedu.csc.fi
 theme:
   name: material
   custom_dir: extras
@@ -63,28 +63,40 @@ markdown_extensions:
 nav:
   - 'Start': 'index.md'
   - 'All articles sorted by tags': 'tags.md'
-  - 'Authentication and authorization infrastucture':
-    - Haka: 'haka.md'
-    - 'My CSC': 'mycsc/index.md'
-  - 'Remote desktop and environment for sensitive data':
-    - 'SD Desktop': 'sd-desktop/index.md'
-  - 'EuroHPC HPC/HPA/AI':
-    - 'LUMI': 'hpc.md'
-  - 'National HPC/HPA/AI':
-    - 'Docs CSC': 'docs-csc.md'
-    - 'Mahti': 'hpc.md'
-    - 'Puhti': 'hpc.md'
-  - 'Community cloud':
-    - cPouta: 'cpouta/index.md'
-  - 'Virtual private cloud':
-    - ePouta: 'epouta.md'
-  - 'Database as a service':
-    - Pukki: 'pukki/index.md'
-  - 'Container cloud':
-    - Rahti: 'rahti/index.md'
-  - 'Easy data analytics':
-    - 'Noppe': 'noppe/index.md'
-  - 'High-capacity storage':
-    - Allas: 'allas/index.md'
-  - 'Sensitive data storage':
-    - 'SD Connect': 'sd-connect/index.md'
+  - Allas: 'allas/index.md'
+  - cPouta: 'cpouta/index.md'
+  - 'Docs CSC': 'docs-csc.md'
+  - ePouta: 'epouta.md'
+  - 'HPC': 'hpc.md'
+  - Haka: 'haka.md'
+  - 'My CSC': 'mycsc/index.md'
+  - 'Noppe': 'noppe/index.md'
+  - Pukki: 'pukki/index.md'
+  - Rahti: 'rahti/index.md'
+  - 'SD Connect': 'sd-connect/index.md'
+  - 'SD Desktop': 'sd-desktop/index.md'
+
+#  - 'Start': 'index.md'
+#  - 'All articles sorted by tags': 'tags.md'
+#  - 'Authentication and authorization infrastucture':
+#    - Haka: 'haka.md'
+#    - 'My CSC': 'mycsc/index.md'
+#  - 'Remote desktop and environment for sensitive data':
+#    - 'SD Desktop': 'sd-desktop/index.md'
+#  - 'National HPC/HPA/AI':
+#    - 'Docs CSC': 'docs-csc.md'
+#    - 'HPC': 'hpc.md'
+#  - 'Community cloud':
+#    - cPouta: 'cpouta/index.md'
+#  - 'Virtual private cloud':
+#    - ePouta: 'epouta.md'
+#  - 'Database as a service':
+#    - Pukki: 'pukki/index.md'
+#  - 'Container cloud':
+#    - Rahti: 'rahti/index.md'
+#  - 'Easy data analytics':
+#    - 'Noppe': 'noppe/index.md'
+#  - 'High-capacity storage':
+#    - Allas: 'allas/index.md'
+#  - 'Sensitive data storage':
+#    - 'SD Connect': 'sd-connect/index.md'
